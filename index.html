@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora da Lei de Coulomb</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>💡 Calculadora da Lei de Coulomb</h1>
+        <p>Digite as cargas elétricas em **microcoulombs (µC)** e veja a força elétrica entre elas!</p>
+
+        <div class="input-group">
+            <label for="q1">Carga 1 (µC):</label>
+            <input type="number" id="q1" step="any" placeholder="Exemplo: 10">
+        </div>
+
+        <div class="input-group">
+            <label for="q2">Carga 2 (µC):</label>
+            <input type="number" id="q2" step="any" placeholder="Exemplo: -5">
+        </div>
+
+        <button onclick="calcularForca()">🔍 Calcular</button>
+
+        <h2>📊 Resultados:</h2>
+        <div id="resultado"></div>
+
+        <div id="grafico-container">
+            <canvas id="grafico"></canvas>
+        </div>
+    </div>
+</body>
+</html>

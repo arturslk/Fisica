@@ -1,0 +1,145 @@
+/* Importar a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #1e5631, #4caf50); /* Verde vibrante */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-attachment: fixed; /* Fixar o fundo para um efeito mais dinâmico */
+}
+
+/* Contêiner principal */
+.container {
+    background: white; /* Fundo branco */
+    padding: 30px;
+    border-radius: 16px;
+    width: 80%;
+    max-width: 800px; /* Tamanho máximo ajustado para melhorar a leitura */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: scale(1); /* Transição suave quando a página carregar */
+    transition: transform 0.3s ease-in-out; /* Transição suave no carregamento */
+}
+
+.container:hover {
+    transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse */
+}
+
+/* Ajustes de responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Ocupa quase toda a tela em dispositivos menores */
+    }
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333; /* Tom mais escuro para o título */
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Descrição do título */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Inputs estilizados */
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin-top: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #4caf50; /* Cor do foco mais vibrante */
+    background-color: #f1f1f1; /* Leve cor de fundo quando o campo é focado */
+}
+
+/* Botão estilizado */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.3rem;
+    background: #ff5722; /* Laranja vibrante */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e64a19; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Gráfico */
+#grafico-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 400px;
+}
+
+/* Estilos de mensagem de erro */
+#errorMessage {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Melhorar a legibilidade das mensagens de resultado */
+#resultado {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    font-weight: 600;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
